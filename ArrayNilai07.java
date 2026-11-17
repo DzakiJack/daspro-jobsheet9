@@ -9,11 +9,14 @@ public class ArrayNilai07 {
             nilaiAkhir[i] = input.nextInt();
         }
 
-        for (int i = 0; i < nilaiAkhir.length; i++) {
-           String status = (nilaiAkhir[i] > 70) ? "Lulus" : "Tidak Lulus";
-            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" + status + ")");
+      for (int i = 0; i < nilaiAkhir.length; i++) {
+        if (nilaiAkhir[i] > 70) {
+        System.out.println("Mahasiswa ke-" + (i + 1) +
+        ": " + nilaiAkhir[i] + " (LULUS)");
         }
+      }
 
         input.close();
+    
     }
 }
