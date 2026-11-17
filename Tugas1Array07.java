@@ -10,10 +10,9 @@ public class Tugas1Array07 {
         int jumlah = sc.nextInt();
 
         int[] nilaiMhs = new int [jumlah];
-        Scanner input = new Scanner(System.in);
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
-            nilaiMhs[i] = input.nextInt();
+            nilaiMhs[i] = sc.nextInt();
             total += nilaiMhs[i];
         }
 
