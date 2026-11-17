@@ -8,14 +8,27 @@ public class ArrayNilai07 {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
             nilaiAkhir[i] = input.nextInt();
         }
-
-      for (int i = 0; i < nilaiAkhir.length; i++) {
-        if (nilaiAkhir[i] > 70) {
-        System.out.println("Mahasiswa ke-" + (i + 1) +
-        ": " + nilaiAkhir[i] + " (LULUS)");
+        
+        int lulus = 0;
+        int tidakLulus = 0;
+        
+        for (int i = 0; i < nilaiAkhir.length; i++) {
+            String status;
+            
+            if (nilaiAkhir[i] > 70) {
+                status = "LULUS";
+                lulus++;
+            } else {
+                status = "TIDAK LULUS";
+                tidakLulus++;
+            }
+            
+            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" + status + ")");
         }
-      }
-
+        
+        System.out.println("Jumlah mahasiswa LULUS: " + lulus);
+        System.out.println("Jumlah mahasiswa TIDAK LULUS: " + tidakLulus);
+        
         input.close();
     
     }
