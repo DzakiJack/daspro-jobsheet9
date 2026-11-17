@@ -26,6 +26,16 @@ public class ArrayRataNilai07 {
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
 
+        int jumlahLulus = 0;
+        
+        for (int i = 0; i < nilaiMhs.length; i++) {
+            if (nilaiMhs[i] > 70) {
+                jumlahLulus++;
+            }
+        }
+
+System.out.println("Jumlah mahasiswa yang lulus: " + jumlahLulus);
+
         String predikat;
         if (rata2 >= 85) {
             predikat = "SANGAT BAIK";
@@ -36,7 +46,7 @@ public class ArrayRataNilai07 {
         }
 
         System.out.println("Predikat kelas: " + predikat);
-        
+
         input.close();
     }
 }
