@@ -2,10 +2,14 @@ import java.util.Scanner;
 
 public class ArrayRataNilai07 {
     public static void main(String[] args) {
-        int[] nilaiMhs = new int[10];
         int total = 0;
         double rata2;
         Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlah = input.nextInt();
+
+        int[] nilaiMhs = new int[jumlah];
 
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
@@ -33,8 +37,8 @@ public class ArrayRataNilai07 {
                 jumlahLulus++;
             }
         }
-
-System.out.println("Jumlah mahasiswa yang lulus: " + jumlahLulus);
+        
+        System.out.println("Jumlah mahasiswa yang lulus: " + jumlahLulus);
 
         String predikat;
         if (rata2 >= 85) {
